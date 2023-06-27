@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Add a new product</h1>
+  <div *ngIf="invalidData" class="alert alert-danger">Every field is required</div>
+  <form #player="ngForm" (ngSubmit)="submit(player)">
+    <div class="form-group">
+      <label for="first-name">First name</label><br />
+      <input type="text" name="first-name" class="form-control" ngModel required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="last-name">Last name</label><br />
+      <input type="text" name="last-name" class="form-control" ngModel required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="position">Position</label><br />
+      <input type="text" name="position" class="form-control" ngModel required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="current-team">Current team</label><br />
+      <input type="text" name="current-team" class="form-control" ngModel required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="age">Age</label><br />
+      <input type="text" name="age" class="form-control" ngModel required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="height">Height (cm)</label><br />
+      <input type="text" name="height" class="form-control" ngModel required>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="image">Image source</label><br />
+      <input type="text" name="image" class="form-control" ngModel required>
+    </div>
+    <pre></pre>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>

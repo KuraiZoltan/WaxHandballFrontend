@@ -1,0 +1,15 @@
+<h1>Players stored</h1>
+<button *ngIf="!isAddPlayerPressed" (click)="isAddPlayerPressed=true" class="btn-primary btn" >Add player</button>
+<div *ngIf="isAddPlayerPressed">
+  <app-add-player-form></app-add-player-form>
+</div>
+<div class="row">
+  <div class="card col" *ngFor="let player of players">
+    <p>{{ player.firstName }} {{ player.lastName }}</p>
+    <img src="{{ player.image }}" />
+    <p>{{ player.position }}</p>
+    <p>{{ player.currentTeam }}</p>
+    <p>{{ player.age }}</p>
+    <p>{{ player.heightInCentimeters }} cm</p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+img {
+  max-width: 200px;
+  max-height: 200px;
+}

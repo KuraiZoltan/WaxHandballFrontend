@@ -1,0 +1,31 @@
+<h1 id="tableLabel">Product List</h1>
+
+<p>Here you can inspect every product in the webshop</p>
+
+<p *ngIf="!products"><em>Loading...</em></p>
+<button (click)="addProduct=true">Add Product</button>
+<div *ngIf="addProduct">
+  <app-add-product-form></app-add-product-form>
+</div>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="products">
+  <thead>
+    <tr>
+      <th>Product Id</th>
+      <th>Product Name</th>
+      <th>Description</th>
+      <th>Image Source</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.productId }}</td>
+      <td>{{ product.productName }}</td>
+      <td>{{ product.productDescription }}</td>
+      <td>{{ product.imageSource }}</td>
+      <td>{{ product.price }} HUF</td>
+      <td><button class="btn" (click)="deleteProduct(product.productId)">Delete product</button></td>
+    </tr>
+  </tbody>
+</table>
