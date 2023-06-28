@@ -6,12 +6,13 @@
   <option value="15">15</option>
 </select>-->
 <div class="row">
-  <div *ngFor="let team of this.teams" class="col card">
-    <h2>{{team.Team}}</h2>
-    <img src="{{team.Logo}}" />
-    <h3>Points: {{team.Points}}</h3>
-    <h4>Position: {{team.Position}}</h4>
-
+  <div *ngFor="let team of this.teams" class="col team">
+    <div class="col standing-details">
+      <h2>{{team.Team}}</h2>
+      <img src="{{team.Logo}}" />
+      <h3>Points: {{team.Points}}</h3>
+      <h4>Position: {{team.Position}}</h4>
+    </div>
     <div class="row">
       <p class="col">Wins: {{team.Wins}}</p>
       <p class="col">Lost: {{team.Lost}}</p>

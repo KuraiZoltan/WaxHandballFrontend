@@ -1,3 +1,13 @@
-.league-standings {
-    max-height: 200px
+.league-standings, .products, .players {
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
 }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }

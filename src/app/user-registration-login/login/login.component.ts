@@ -19,7 +19,7 @@ export class LoginComponent {
     }
     const headers = { 'Content-Type': 'application/json' }
     const body = JSON.stringify(payload)
-    this.http.post("https://localhost:7020/User/loginUser", body, { "headers": headers })
+    this.http.post("https://localhost:7020/User/loginUser", body, { "headers": headers, withCredentials: true })
       .subscribe(response => {
         const token = (<any>response)
         sessionStorage.setItem("jwt", token.access_token)

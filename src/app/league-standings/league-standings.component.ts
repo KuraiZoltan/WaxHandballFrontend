@@ -31,7 +31,7 @@ export class LeagueStandingsComponent {
         'x-rapidapi-host': 'https://v1.handball.api-sports.io/'
       };
       this.http.get(`https://v1.handball.api-sports.io/standings?league=49&season=2022`, { 'headers': headers }).subscribe((results: any) => {
-        const teamStandings = []
+        const teamStandings: any = []
         for (let i = 0; i < 3; i++) {
           var teamStanding = {
             Team: results.response[0][i].team.name,

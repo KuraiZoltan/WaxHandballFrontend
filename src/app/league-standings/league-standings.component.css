@@ -2,3 +2,14 @@ img {
     max-height: 100px;
     max-width: 100px;
 }
+
+.team {
+    border: 1px solid black;
+    margin: 0.5rem;
+}
+
+.standing-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

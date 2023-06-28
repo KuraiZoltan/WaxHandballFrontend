@@ -11,7 +11,9 @@ export class PlayersComponent {
 
   constructor(private http: HttpClient) {
     http.get<Players[]>("https://localhost:7020/Player/getPlayers").subscribe(result => {
-      this.players = result;
+      for (let i = 0; i < 4; i++) {
+        this.players.push(result[i])
+      }
     }, error => console.error(error));
   }
 
