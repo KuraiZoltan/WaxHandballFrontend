@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../models/product';
+import { WebshopHomeComponent } from '../webshop-home/webshop-home.component';
 
 @Component({
   selector: 'productsComponent',
@@ -9,16 +11,13 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent {
   public products: Product[] = [];
 
-  constructor(http: HttpClient) {
+  constructor(http: HttpClient, private webshopHome: WebshopHomeComponent) {
     http.get<Product[]>("https://localhost:7020/Product/getProducts").subscribe(result => {
       this.products = result;
     }, error => console.error(error));
   }
-}
 
-interface Product {
-  productName: string;
-  productDescription: string;
-  imageSource: string;
-  price: string;
+  addToCart(product: Product) {
+    this.webshopHome.addToCart(product);
+  }
 }

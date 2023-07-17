@@ -1,0 +1,16 @@
+img {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.product {
+  margin: 2rem;
+  width: 150px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

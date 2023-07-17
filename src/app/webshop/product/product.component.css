@@ -1,8 +1,28 @@
 img {
-    max-width: 100px;
-    max-height: 100px;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .product {
-    margin: 0.5rem;
+  margin: 2rem;
+  width: 400px;
+}
+
+.cart-button {
+    margin: 2rem;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-button svg:hover {
+    background: #cbcbcb;
+    border: 1px solid #959595;
+    border-radius: 5px;
 }

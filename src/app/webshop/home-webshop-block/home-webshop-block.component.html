@@ -1,0 +1,11 @@
+<div class="container row">
+  <div class="container card product col-sm" *ngFor="let product of products">
+    <div class="product-details">
+      <h4>{{ product.productName }}</h4>
+      <img src="{{ product.imageSource }}" />
+      <p>Price: {{ product.price }} HUF</p>
+      <p>{{ product.productDescription }}</p>
+    </div>
+  </div>
+</div>
+

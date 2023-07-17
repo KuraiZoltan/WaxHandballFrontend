@@ -10,15 +10,16 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { ViewProductsComponent } from './webshop/view-products/view-products.component';
 import { ProductComponent } from './webshop/product/product.component';
-import { AddProductFormComponent } from './webshop/add-product-form/add-product-form.component'
-import { WebshopHomeComponent } from './webshop/webshop-home/webshop-home.component'
-import { RegistrationComponent } from './user-registration-login/registration/registration.component'
-import { LoginComponent } from './user-registration-login/login/login.component'
+import { AddProductFormComponent } from './webshop/add-product-form/add-product-form.component';
+import { WebshopHomeComponent } from './webshop/webshop-home/webshop-home.component';
+import { RegistrationComponent } from './user-registration-login/registration/registration.component';
+import { LoginComponent } from './user-registration-login/login/login.component';
 import { AuthGuard } from './guards/auth-guard.service';
-import { PlayersComponent } from './players/player-cards/players.component'
-import { ViewPlayersComponent } from './players/view-players/view-players.component'
-import { AddPlayerFormComponent } from './players/add-player-form/add-player-form.component'
-import { LeagueStandingsComponent } from './league-standings/league-standings.component'
+import { PlayersComponent } from './players/player-cards/players.component';
+import { ViewPlayersComponent } from './players/view-players/view-players.component';
+import { AddPlayerFormComponent } from './players/add-player-form/add-player-form.component';
+import { LeagueStandingsComponent } from './league-standings/league-standings.component';
+import { HomeWebshopBlockComponent } from './webshop/home-webshop-block/home-webshop-block.component';
 
 export function tokenGetter() {
   return sessionStorage.getItem("jwt")
@@ -39,7 +40,8 @@ export function tokenGetter() {
     PlayersComponent,
     ViewPlayersComponent,
     AddPlayerFormComponent,
-    LeagueStandingsComponent
+    LeagueStandingsComponent,
+    HomeWebshopBlockComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -56,7 +58,7 @@ export function tokenGetter() {
       { path: 'league-standing', component: LeagueStandingsComponent }
     ]),
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, WebshopHomeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
