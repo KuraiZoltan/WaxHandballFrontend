@@ -18,7 +18,7 @@ export class CheckoutComponent {
 
   calculatePrice() {
     for (let product of this.products) {
-      this.priceSummary += parseInt(product.price);
+      this.priceSummary += parseInt(product.price) * product.value;
     }
   }
 }
