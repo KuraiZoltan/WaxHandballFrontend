@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Product } from '../../models/product';
 import { WebshopHomeComponent } from '../webshop-home/webshop-home.component';
 
@@ -17,7 +17,8 @@ export class ProductComponent {
     }, error => console.error(error));
   }
 
-  addToCart(product: Product) {
+  addToCart(product: Product, valueInput: any) {
+    product.value = valueInput.value;
     this.webshopHome.addToCart(product);
   }
 }
