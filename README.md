@@ -1,5 +1,10 @@
 # WaxHandballFrontend
 
+# Project History
+The project was made in a combined asp.net - angular project with SPA Proxy, then it was separated into a frontend and backend (Backend repository: https://github.com/KuraiZoltan/WaxHandballBackend).
+Basic implementation/view was made before the separation, further developments are being made.
+
+#
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 
 ## Development server
