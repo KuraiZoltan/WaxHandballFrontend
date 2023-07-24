@@ -17,3 +17,11 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+.checkout-summary {
+    margin: 2rem;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    padding: 3rem;
+    padding-bottom: 5rem;
+}
