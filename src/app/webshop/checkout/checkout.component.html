@@ -1,12 +1,49 @@
-<h3>Cart</h3>
-
-<div class="container card product" *ngFor="let product of products">
-  <div class="product-details">
-    <h4>{{ product.productName }}</h4>
-    <img src="{{ product.imageSource }}" />
-    <p>Price: {{ product.price }} HUF</p>
-    <p>{{ product.productDescription }}</p>
+<h2>Cart</h2>
+  <div class="checkout-summary" *ngIf="products.length != 0">
+    <h4>Summary</h4>
+    <table class='table table-striped' aria-labelledby="tableLabel">
+      <thead>
+        <tr>
+          <th>
+            Product
+          </th>
+          <th>
+          </th>
+          <th>
+            Price
+          </th>
+          <th>
+            Item count
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>
+            {{ product.productName }}
+          </td>
+          <td>
+            <img src="{{ product.imageSource }}"/>
+          </td>
+          <td>
+            {{ product.price }}
+          </td>
+          <td>
+            {{ product.value }}
+          </td>
+        </tr>
+      </tbody>
+      
+    </table>
+    <div class="continue-checkout">
+      <h4>Full price: {{ priceSummary }}</h4>
+      <a class="btn btn-primary" href="/payment">Continue to payment</a>
+    </div>
   </div>
+
+<div class="checkout-summary" *ngIf="products.length == 0">
+  <h2>It appears there's no item in your cart!</h2>
 </div>
+
 
 
