@@ -20,6 +20,8 @@ import { ViewPlayersComponent } from './players/view-players/view-players.compon
 import { AddPlayerFormComponent } from './players/add-player-form/add-player-form.component';
 import { LeagueStandingsComponent } from './league-standings/league-standings.component';
 import { HomeWebshopBlockComponent } from './webshop/home-webshop-block/home-webshop-block.component';
+import { CheckoutComponent } from './webshop/checkout/checkout.component';
+import { WebshopService } from './webshop/webshop.service';
 
 export function tokenGetter() {
   return sessionStorage.getItem("jwt")
@@ -41,7 +43,8 @@ export function tokenGetter() {
     ViewPlayersComponent,
     AddPlayerFormComponent,
     LeagueStandingsComponent,
-    HomeWebshopBlockComponent
+    HomeWebshopBlockComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -55,10 +58,11 @@ export function tokenGetter() {
       { path: 'webshop-home', component: WebshopHomeComponent },
       { path: 'registration', component: RegistrationComponent},
       { path: 'login', component: LoginComponent },
-      { path: 'league-standing', component: LeagueStandingsComponent }
+      { path: 'league-standing', component: LeagueStandingsComponent },
+      { path: 'checkout', component: CheckoutComponent }
     ]),
   ],
-  providers: [AuthGuard, WebshopHomeComponent],
+  providers: [AuthGuard, WebshopHomeComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
