@@ -1,0 +1,19 @@
+.cart {
+    border: 1px solid grey;
+}
+
+.product {
+  margin: 2rem;
+}
+
+img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
