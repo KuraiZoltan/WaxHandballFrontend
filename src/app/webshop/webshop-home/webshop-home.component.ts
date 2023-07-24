@@ -18,8 +18,4 @@ export class WebshopHomeComponent implements OnInit {
     this.service.addToCart(product);
     window.alert("Your product has been added to your cart!");
   }
-
-  initalizeCheckout() {
-    
-  }
 }
