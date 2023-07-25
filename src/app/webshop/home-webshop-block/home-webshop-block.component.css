@@ -5,7 +5,7 @@ img {
 
 .product {
   margin: 2rem;
-  width: 150px;
+  min-width: 150px;
 }
 
 .product-details {
