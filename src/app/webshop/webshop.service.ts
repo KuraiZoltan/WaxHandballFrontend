@@ -9,7 +9,11 @@ export class WebshopService {
   constructor() { }
 
   addToCart(product: Product) {
-    this.cart.push(product);
+    if (this.cart.find(element => element.productName == product.productName)) {
+      this.cart.find(element => element.productName == product.productName)!.value += product.value
+    } else {
+      this.cart.push(product);
+    }
   }
 
   getItems() {
