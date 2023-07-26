@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from '../../models/product';
 import { WebshopService } from '../webshop.service';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-checkout',
@@ -12,7 +13,7 @@ export class CheckoutComponent {
   productCount!: Product[];
   priceSummary = 0;
 
-  constructor(private service: WebshopService) {
+  constructor(private service: WebshopService, private location: Location) {
     this.calculatePrice()
   }
 
@@ -20,5 +21,9 @@ export class CheckoutComponent {
     for (let product of this.products) {
       this.priceSummary += parseInt(product.price) * product.value;
     }
+  }
+
+  returnToShopping() {
+    this.location.back()
   }
 }
