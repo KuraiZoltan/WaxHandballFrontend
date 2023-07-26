@@ -18,7 +18,7 @@ export class ProductComponent {
   }
 
   addToCart(product: Product, valueInput: any) {
-    product.value = valueInput.value;
+    product.value = parseInt(valueInput.value);
     this.webshopHome.addToCart(product);
   }
 }
