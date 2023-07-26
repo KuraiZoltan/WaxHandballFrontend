@@ -25,3 +25,14 @@ img {
     padding: 3rem;
     padding-bottom: 5rem;
 }
+
+.checkout-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout-navigation a {
+    margin: 2rem;
+}
