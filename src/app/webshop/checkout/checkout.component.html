@@ -37,7 +37,10 @@
     </table>
     <div class="continue-checkout">
       <h4>Full price: {{ priceSummary }} HUF</h4>
-      <a class="btn btn-primary" href="/payment">Continue to payment</a>
+      <div class="checkout-navigation">
+        <a class="btn btn-primary" href="/payment">Continue to payment</a>
+        <button class="btn btn-primary" (click)="returnToShopping()">Continue shopping</button>
+      </div>
     </div>
   </div>
 
