@@ -21,7 +21,7 @@ import { AddPlayerFormComponent } from './players/add-player-form/add-player-for
 import { LeagueStandingsComponent } from './league-standings/league-standings.component';
 import { HomeWebshopBlockComponent } from './webshop/home-webshop-block/home-webshop-block.component';
 import { CheckoutComponent } from './webshop/checkout/checkout.component';
-import { WebshopService } from './webshop/webshop.service';
+import { SearchbarComponent } from './webshop/searchbar/searchbar.component';
 
 export function tokenGetter() {
   return sessionStorage.getItem("jwt")
@@ -44,7 +44,8 @@ export function tokenGetter() {
     AddPlayerFormComponent,
     LeagueStandingsComponent,
     HomeWebshopBlockComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
