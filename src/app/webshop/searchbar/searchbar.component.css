@@ -1,0 +1,28 @@
+.item-searchbar {
+  border: 1px grey solid;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.item-searchbar label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.item-searchbar input {
+    width: 700px;
+    height: 35px;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.search-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    margin:0 2rem 2rem;
+}
